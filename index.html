@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wisdom Cards - Daily Inspiration</title>
     <link rel="stylesheet" href="style.css">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#3498db">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Wisdom Cards">
+    <link rel="apple-touch-icon" href="app-icons/icon-152x152.png">
+    <link rel="icon" type="image/png" href="app-icons/icon-192x192.png">
+    
+    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -39,6 +50,9 @@
                             <button class="action-btn" id="favoriteBtn" title="Add to favorites">
                                 <i class="far fa-heart"></i>
                             </button>
+                            <button class="action-btn" id="shareBtn" title="Share wisdom">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -63,34 +77,39 @@
                     <span>Favorites: <span id="favoritesCount">0</span></span>
                 </div>
                 <div class="stat">
-                    <i class="fas fa-history"></i>
-                    <span>Last updated: <span id="lastUpdate">Just now</span></span>
+                    <i class="fas fa-cloud"></i>
+                    <span>Database: <span id="dbStatus">Online</span></span>
                 </div>
             </div>
 
             <div class="instructions">
                 <h3><i class="fas fa-lightbulb"></i> How to Use</h3>
                 <ul>
-                    <li>Click <strong>"New Wisdom"</strong> for a fresh insight</li>
-                    <li>Use the buttons below the card to copy, listen, or favorite</li>
-                    <li>Click <strong>"Change Category"</strong> to switch wisdom types</li>
-                    <li>Your count is saved automatically!</li>
+                    <li>Click <strong>"New Wisdom"</strong> for fresh insight</li>
+                    <li>Use buttons to copy, listen, or favorite</li>
+                    <li>Tap <strong>"Add to Home Screen"</strong> to install as app</li>
+                    <li>Works offline after first visit</li>
                 </ul>
+            </div>
+            
+            <div class="pwa-install" id="pwaInstall">
+                <i class="fas fa-mobile-alt"></i>
+                <span>Install as app: Tap <i class="fas fa-share"></i> then "Add to Home Screen"</span>
             </div>
         </main>
 
         <footer>
             <p>Made with <i class="fas fa-heart" style="color: #e74c3c;"></i> for seekers of wisdom</p>
             <p class="footer-links">
-                <a href="#"><i class="fab fa-github"></i> GitHub</a> | 
-                <a href="#"><i class="fas fa-share-alt"></i> Share</a> | 
+                <a href="#" id="refreshDataBtn"><i class="fas fa-sync-alt"></i> Refresh Data</a> | 
+                <a href="#" id="shareAppBtn"><i class="fas fa-share-alt"></i> Share App</a> | 
                 <a href="#" id="resetBtn"><i class="fas fa-redo"></i> Reset</a>
             </p>
         </footer>
     </div>
 
     <!-- Toast Notification -->
-    <div id="toast" class="toast">Copied to clipboard!</div>
+    <div id="toast" class="toast"></div>
 
     <!-- Category Modal -->
     <div id="categoryModal" class="modal">
@@ -108,6 +127,30 @@
         </div>
     </div>
 
+    <!-- Scripts -->
     <script src="script.js"></script>
+    <script src="update-checker.js"></script>
+    <script>
+        // Register Service Worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('service-worker.js')
+                    .then(registration => {
+                        console.log('Service Worker registered:', registration);
+                    })
+                    .catch(error => {
+                        console.log('Service Worker registration failed:', error);
+                    });
+            });
+        }
+        
+        // PWA Install Prompt
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            document.getElementById('pwaInstall').style.display = 'flex';
+        });
+    </script>
 </body>
 </html>
