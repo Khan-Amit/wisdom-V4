@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisdom Cards - Daily Inspiration</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-brain"></i> Wisdom Cards</h1>
+            <p class="tagline">Daily doses of insight and inspiration</p>
+        </header>
+
+        <main>
+            <div class="card-container">
+                <div class="wisdom-card" id="wisdomCard">
+                    <div class="card-header">
+                        <i class="fas fa-quote-left"></i>
+                        <span class="card-category">Philosophy</span>
+                    </div>
+                    <div class="card-content">
+                        <p id="wisdomText">Click 'New Wisdom' to receive your first insight</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="author" id="authorText">— Unknown</div>
+                        <div class="card-actions">
+                            <button class="action-btn" id="copyBtn" title="Copy to clipboard">
+                                <i class="far fa-copy"></i>
+                            </button>
+                            <button class="action-btn" id="speakBtn" title="Listen to wisdom">
+                                <i class="fas fa-volume-up"></i>
+                            </button>
+                            <button class="action-btn" id="favoriteBtn" title="Add to favorites">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="btn-primary" id="newWisdomBtn">
+                    <i class="fas fa-sparkles"></i> New Wisdom
+                </button>
+                <button class="btn-secondary" id="categoryBtn">
+                    <i class="fas fa-filter"></i> Change Category
+                </button>
+            </div>
+
+            <div class="stats">
+                <div class="stat">
+                    <i class="fas fa-eye"></i>
+                    <span>Wisdom Received: <span id="counter">0</span></span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-heart"></i>
+                    <span>Favorites: <span id="favoritesCount">0</span></span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-history"></i>
+                    <span>Last updated: <span id="lastUpdate">Just now</span></span>
+                </div>
+            </div>
+
+            <div class="instructions">
+                <h3><i class="fas fa-lightbulb"></i> How to Use</h3>
+                <ul>
+                    <li>Click <strong>"New Wisdom"</strong> for a fresh insight</li>
+                    <li>Use the buttons below the card to copy, listen, or favorite</li>
+                    <li>Click <strong>"Change Category"</strong> to switch wisdom types</li>
+                    <li>Your count is saved automatically!</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <p>Made with <i class="fas fa-heart" style="color: #e74c3c;"></i> for seekers of wisdom</p>
+            <p class="footer-links">
+                <a href="#"><i class="fab fa-github"></i> GitHub</a> | 
+                <a href="#"><i class="fas fa-share-alt"></i> Share</a> | 
+                <a href="#" id="resetBtn"><i class="fas fa-redo"></i> Reset</a>
+            </p>
+        </footer>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Copied to clipboard!</div>
+
+    <!-- Category Modal -->
+    <div id="categoryModal" class="modal">
+        <div class="modal-content">
+            <h2><i class="fas fa-filter"></i> Choose Wisdom Category</h2>
+            <div class="categories">
+                <button class="category-btn active" data-category="all">All Wisdom</button>
+                <button class="category-btn" data-category="philosophy">Philosophy</button>
+                <button class="category-btn" data-category="spiritual">Spiritual</button>
+                <button class="category-btn" data-category="life">Life Advice</button>
+                <button class="category-btn" data-category="motivational">Motivational</button>
+                <button class="category-btn" data-category="eastern">Eastern Wisdom</button>
+            </div>
+            <button class="btn-primary" id="closeCategoryBtn">Done</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
