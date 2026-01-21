@@ -1,8 +1,0 @@
-title: "Wisdom Cards"
-description: "Daily spiritual wisdom PWA"
-baseurl: "/wisdom-V4"
-url: "https://yourusername.github.io"
-theme: null
-plugins: []
-include: ['_pages']
-exclude: ['node_modules']
