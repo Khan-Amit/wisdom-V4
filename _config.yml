@@ -1,0 +1,18 @@
+# _config.yml
+title: "Wisdom Cards"
+description: "Daily doses of insight and inspiration"
+baseurl: "" # Leave empty for project pages
+url: "https://yourusername.github.io" # Will auto-fill
+theme: null # Disable any theme
+plugins: [] # No plugins
+markdown: kramdown
+permalink: pretty
+
+# Disable Jekyll's default processing
+include: ['_pages']
+exclude: ['node_modules', 'vendor', '*.gem']
+keep_files: ['.nojekyll']
+
+# Build settings
+safe: false
+future: true
