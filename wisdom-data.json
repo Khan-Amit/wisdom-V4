@@ -1,0 +1,152 @@
+{
+  "app_name": "Wisdom Cards V4",
+  "version": "1.0.0",
+  "last_updated": "2024-01-15T12:00:00Z",
+  "total_wisdom": 16,
+  "default_category": "all",
+  "wisdom_entries": [
+    {
+      "id": 1,
+      "text": "The only true wisdom is in knowing you know nothing.",
+      "author": "Socrates",
+      "category": "philosophy",
+      "tags": ["ancient", "knowledge", "humility"],
+      "favorites": 1250
+    },
+    {
+      "id": 2,
+      "text": "The journey of a thousand miles begins with one step.",
+      "author": "Lao Tzu",
+      "category": "spiritual",
+      "tags": ["journey", "beginning", "taoism"],
+      "favorites": 890
+    },
+    {
+      "id": 3,
+      "text": "Be the change you wish to see in the world.",
+      "author": "Mahatma Gandhi",
+      "category": "life",
+      "tags": ["change", "action", "inspiration"],
+      "favorites": 2100
+    },
+    {
+      "id": 4,
+      "text": "What we think, we become.",
+      "author": "Buddha",
+      "category": "eastern",
+      "tags": ["mind", "manifestation", "buddhism"],
+      "favorites": 1560
+    },
+    {
+      "id": 5,
+      "text": "The purpose of our lives is to be happy.",
+      "author": "Dalai Lama",
+      "category": "spiritual",
+      "tags": ["happiness", "purpose", "tibetan"],
+      "favorites": 980
+    },
+    {
+      "id": 6,
+      "text": "Life is what happens to you while you're busy making other plans.",
+      "author": "John Lennon",
+      "category": "life",
+      "tags": ["life", "present", "music"],
+      "favorites": 1100
+    },
+    {
+      "id": 7,
+      "text": "In the middle of difficulty lies opportunity.",
+      "author": "Albert Einstein",
+      "category": "motivational",
+      "tags": ["opportunity", "challenge", "science"],
+      "favorites": 1340
+    },
+    {
+      "id": 8,
+      "text": "The mind is everything. What you think you become.",
+      "author": "Buddha",
+      "category": "eastern",
+      "tags": ["mind", "thoughts", "buddhism"],
+      "favorites": 1250
+    },
+    {
+      "id": 9,
+      "text": "The only way to do great work is to love what you do.",
+      "author": "Steve Jobs",
+      "category": "motivational",
+      "tags": ["work", "passion", "technology"],
+      "favorites": 1890
+    },
+    {
+      "id": 10,
+      "text": "Turn your wounds into wisdom.",
+      "author": "Oprah Winfrey",
+      "category": "life",
+      "tags": ["healing", "growth", "wisdom"],
+      "favorites": 1670
+    },
+    {
+      "id": 11,
+      "text": "Peace comes from within. Do not seek it without.",
+      "author": "Buddha",
+      "category": "eastern",
+      "tags": ["peace", "inner", "buddhism"],
+      "favorites": 1420
+    },
+    {
+      "id": 12,
+      "text": "I think, therefore I am.",
+      "author": "René Descartes",
+      "category": "philosophy",
+      "tags": ["existence", "thought", "philosophy"],
+      "favorites": 980
+    },
+    {
+      "id": 13,
+      "text": "To live is the rarest thing in the world. Most people exist, that is all.",
+      "author": "Oscar Wilde",
+      "category": "philosophy",
+      "tags": ["life", "existence", "literature"],
+      "favorites": 1120
+    },
+    {
+      "id": 14,
+      "text": "The unexamined life is not worth living.",
+      "author": "Socrates",
+      "category": "philosophy",
+      "tags": ["examination", "life", "philosophy"],
+      "favorites": 1050
+    },
+    {
+      "id": 15,
+      "text": "Where there is love there is life.",
+      "author": "Mahatma Gandhi",
+      "category": "spiritual",
+      "tags": ["love", "life", "compassion"],
+      "favorites": 1560
+    },
+    {
+      "id": 16,
+      "text": "Believe you can and you're halfway there.",
+      "author": "Theodore Roosevelt",
+      "category": "motivational",
+      "tags": ["belief", "motivation", "leadership"],
+      "favorites": 1340
+    }
+  ],
+  "categories": [
+    {"id": "all", "name": "All Wisdom", "count": 16},
+    {"id": "philosophy", "name": "Philosophy", "count": 4},
+    {"id": "spiritual", "name": "Spiritual", "count": 3},
+    {"id": "life", "name": "Life Advice", "count": 3},
+    {"id": "motivational", "name": "Motivational", "count": 3},
+    {"id": "eastern", "name": "Eastern Wisdom", "count": 3}
+  ],
+  "app_settings": {
+    "daily_quote": true,
+    "notifications": false,
+    "dark_mode": false,
+    "auto_update": true,
+    "offline_mode": true
+  }
+}
